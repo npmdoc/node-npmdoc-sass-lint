@@ -1,0 +1,2185 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a href="https://github.com/sasstools/sass-lint">sass-lint (v1.10.2)</a>
+</h1>
+<h4>All Node Sass linter!</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.sass-lint">module sass-lint</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sass-lint.errorCount">
+            function <span class="apidocSignatureSpan">sass-lint.</span>errorCount
+            <span class="apidocSignatureSpan">(results)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sass-lint.failOnError">
+            function <span class="apidocSignatureSpan">sass-lint.</span>failOnError
+            <span class="apidocSignatureSpan">(results, options, configPath)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sass-lint.format">
+            function <span class="apidocSignatureSpan">sass-lint.</span>format
+            <span class="apidocSignatureSpan">(results, options, configPath)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sass-lint.getConfig">
+            function <span class="apidocSignatureSpan">sass-lint.</span>getConfig
+            <span class="apidocSignatureSpan">(config, configPath)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sass-lint.lintFileText">
+            function <span class="apidocSignatureSpan">sass-lint.</span>lintFileText
+            <span class="apidocSignatureSpan">(file, options, configPath)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sass-lint.lintFiles">
+            function <span class="apidocSignatureSpan">sass-lint.</span>lintFiles
+            <span class="apidocSignatureSpan">(files, options, configPath)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sass-lint.lintText">
+            function <span class="apidocSignatureSpan">sass-lint.</span>lintText
+            <span class="apidocSignatureSpan">(file, options, configPath)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sass-lint.outputResults">
+            function <span class="apidocSignatureSpan">sass-lint.</span>outputResults
+            <span class="apidocSignatureSpan">(results, options, configPath)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sass-lint.resultCount">
+            function <span class="apidocSignatureSpan">sass-lint.</span>resultCount
+            <span class="apidocSignatureSpan">(results)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sass-lint.warningCount">
+            function <span class="apidocSignatureSpan">sass-lint.</span>warningCount
+            <span class="apidocSignatureSpan">(results)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">sass-lint.</span>config_helpers</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">sass-lint.</span>exceptions</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">sass-lint.</span>helpers</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">sass-lint.</span>ruleToggler</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">sass-lint.</span>selector_helpers</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.sass-lint.config_helpers">module sass-lint.config_helpers</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sass-lint.config_helpers.checkForConfigExtend">
+            function <span class="apidocSignatureSpan">sass-lint.config_helpers.</span>checkForConfigExtend
+            <span class="apidocSignatureSpan">(config, curConfPath)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sass-lint.config_helpers.findFile">
+            function <span class="apidocSignatureSpan">sass-lint.config_helpers.</span>findFile
+            <span class="apidocSignatureSpan">(configPath, filename)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sass-lint.config_helpers.loadConfig">
+            function <span class="apidocSignatureSpan">sass-lint.config_helpers.</span>loadConfig
+            <span class="apidocSignatureSpan">(cPath)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sass-lint.config_helpers.loadDefaults">
+            function <span class="apidocSignatureSpan">sass-lint.config_helpers.</span>loadDefaults
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.sass-lint.exceptions">module sass-lint.exceptions</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sass-lint.exceptions.MaxWarningsExceededError">
+            function <span class="apidocSignatureSpan">sass-lint.exceptions.</span>MaxWarningsExceededError
+            <span class="apidocSignatureSpan">(message)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sass-lint.exceptions.SassLintFailureError">
+            function <span class="apidocSignatureSpan">sass-lint.exceptions.</span>SassLintFailureError
+            <span class="apidocSignatureSpan">(message)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.sass-lint.helpers">module sass-lint.helpers</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sass-lint.helpers.addUnique">
+            function <span class="apidocSignatureSpan">sass-lint.helpers.</span>addUnique
+            <span class="apidocSignatureSpan">(results, item)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sass-lint.helpers.attemptTraversal">
+            function <span class="apidocSignatureSpan">sass-lint.helpers.</span>attemptTraversal
+            <span class="apidocSignatureSpan">(node, traversalPath)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sass-lint.helpers.collectSuffixExtensions">
+            function <span class="apidocSignatureSpan">sass-lint.helpers.</span>collectSuffixExtensions
+            <span class="apidocSignatureSpan">(ruleset, selectorType)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sass-lint.helpers.hasEOL">
+            function <span class="apidocSignatureSpan">sass-lint.helpers.</span>hasEOL
+            <span class="apidocSignatureSpan">(str)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sass-lint.helpers.isCamelCase">
+            function <span class="apidocSignatureSpan">sass-lint.helpers.</span>isCamelCase
+            <span class="apidocSignatureSpan">(str)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sass-lint.helpers.isEmptyLine">
+            function <span class="apidocSignatureSpan">sass-lint.helpers.</span>isEmptyLine
+            <span class="apidocSignatureSpan">(str)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sass-lint.helpers.isEqual">
+            function <span class="apidocSignatureSpan">sass-lint.helpers.</span>isEqual
+            <span class="apidocSignatureSpan">(a, b)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sass-lint.helpers.isHyphenatedBEM">
+            function <span class="apidocSignatureSpan">sass-lint.helpers.</span>isHyphenatedBEM
+            <span class="apidocSignatureSpan">(str)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sass-lint.helpers.isHyphenatedLowercase">
+            function <span class="apidocSignatureSpan">sass-lint.helpers.</span>isHyphenatedLowercase
+            <span class="apidocSignatureSpan">(str)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sass-lint.helpers.isLowerCase">
+            function <span class="apidocSignatureSpan">sass-lint.helpers.</span>isLowerCase
+            <span class="apidocSignatureSpan">(str)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sass-lint.helpers.isNestable">
+            function <span class="apidocSignatureSpan">sass-lint.helpers.</span>isNestable
+            <span class="apidocSignatureSpan">(currentVal, previousVal, elements, nestable)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sass-lint.helpers.isNewLine">
+            function <span class="apidocSignatureSpan">sass-lint.helpers.</span>isNewLine
+            <span class="apidocSignatureSpan">(node)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sass-lint.helpers.isNumber">
+            function <span class="apidocSignatureSpan">sass-lint.helpers.</span>isNumber
+            <span class="apidocSignatureSpan">(val)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sass-lint.helpers.isPartialStringMatch">
+            function <span class="apidocSignatureSpan">sass-lint.helpers.</span>isPartialStringMatch
+            <span class="apidocSignatureSpan">(needle, haystack)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sass-lint.helpers.isPascalCase">
+            function <span class="apidocSignatureSpan">sass-lint.helpers.</span>isPascalCase
+            <span class="apidocSignatureSpan">(str)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sass-lint.helpers.isSnakeCase">
+            function <span class="apidocSignatureSpan">sass-lint.helpers.</span>isSnakeCase
+            <span class="apidocSignatureSpan">(str)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sass-lint.helpers.isSpace">
+            function <span class="apidocSignatureSpan">sass-lint.helpers.</span>isSpace
+            <span class="apidocSignatureSpan">(node)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sass-lint.helpers.isStrictBEM">
+            function <span class="apidocSignatureSpan">sass-lint.helpers.</span>isStrictBEM
+            <span class="apidocSignatureSpan">(str)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sass-lint.helpers.isUnique">
+            function <span class="apidocSignatureSpan">sass-lint.helpers.</span>isUnique
+            <span class="apidocSignatureSpan">(results, item)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sass-lint.helpers.isUpperCase">
+            function <span class="apidocSignatureSpan">sass-lint.helpers.</span>isUpperCase
+            <span class="apidocSignatureSpan">(str)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sass-lint.helpers.isValidHex">
+            function <span class="apidocSignatureSpan">sass-lint.helpers.</span>isValidHex
+            <span class="apidocSignatureSpan">(str)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sass-lint.helpers.loadConfigFile">
+            function <span class="apidocSignatureSpan">sass-lint.helpers.</span>loadConfigFile
+            <span class="apidocSignatureSpan">(configPath)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sass-lint.helpers.log">
+            function <span class="apidocSignatureSpan">sass-lint.helpers.</span>log
+            <span class="apidocSignatureSpan">(input)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sass-lint.helpers.propertySearch">
+            function <span class="apidocSignatureSpan">sass-lint.helpers.</span>propertySearch
+            <span class="apidocSignatureSpan">(haystack, needle, property)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sass-lint.helpers.sortDetects">
+            function <span class="apidocSignatureSpan">sass-lint.helpers.</span>sortDetects
+            <span class="apidocSignatureSpan">(a, b)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sass-lint.helpers.stripBom">
+            function <span class="apidocSignatureSpan">sass-lint.helpers.</span>stripBom
+            <span class="apidocSignatureSpan">(str)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sass-lint.helpers.stripLastSpace">
+            function <span class="apidocSignatureSpan">sass-lint.helpers.</span>stripLastSpace
+            <span class="apidocSignatureSpan">(selector)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sass-lint.helpers.stripPrefix">
+            function <span class="apidocSignatureSpan">sass-lint.helpers.</span>stripPrefix
+            <span class="apidocSignatureSpan">(str)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sass-lint.helpers.stripQuotes">
+            function <span class="apidocSignatureSpan">sass-lint.helpers.</span>stripQuotes
+            <span class="apidocSignatureSpan">(str)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.sass-lint.ruleToggler">module sass-lint.ruleToggler</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sass-lint.ruleToggler.getToggledRules">
+            function <span class="apidocSignatureSpan">sass-lint.ruleToggler.</span>getToggledRules
+            <span class="apidocSignatureSpan">(ast)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sass-lint.ruleToggler.isResultEnabled">
+            function <span class="apidocSignatureSpan">sass-lint.ruleToggler.</span>isResultEnabled
+            <span class="apidocSignatureSpan">(toggledRules)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.sass-lint.selector_helpers">module sass-lint.selector_helpers</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sass-lint.selector_helpers.constructSelector">
+            function <span class="apidocSignatureSpan">sass-lint.selector_helpers.</span>constructSelector
+            <span class="apidocSignatureSpan">(val)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.sass-lint" id="apidoc.module.sass-lint">module sass-lint</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.sass-lint.errorCount" id="apidoc.element.sass-lint.errorCount">
+        function <span class="apidocSignatureSpan">sass-lint.</span>errorCount
+        <span class="apidocSignatureSpan">(results)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">errorCount = function (results) {
+  var errors = {
+    count: 0,
+    files: []
+  };
+
+  results.forEach(function (result) {
+    if (result.errorCount) {
+      errors.count += result.errorCount;
+      errors.files.push(result.filePath);
+    }
+  });
+
+  return errors;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+* a cumulative count of both
+*
+* @param {object} results our results object
+* @returns {int} the cumulative count of errors and warnings detected
+*/
+sassLint.resultCount = function (results) {
+ var warnings = this.warningCount(results),
+     errors = this.<span class="apidocCodeKeywordSpan">errorCount</span>(results);
+
+ return warnings.count + errors.count;
+};
+
+/**
+* Runs each rule against our AST tree and returns our main object of detected
+* errors, warnings, messages and filenames.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.sass-lint.failOnError" id="apidoc.element.sass-lint.failOnError">
+        function <span class="apidocSignatureSpan">sass-lint.</span>failOnError
+        <span class="apidocSignatureSpan">(results, options, configPath)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">failOnError = function (results, options, configPath) {
+  // Default parameters
+  options = typeof options !== 'undefined' ? options : {};
+  configPath = typeof configPath !== 'undefined' ? configPath : null;
+
+  var errorCount = this.errorCount(results),
+      warningCount = this.warningCount(results),
+      configOptions = this.getConfig(options, configPath).options;
+
+  if (errorCount.count &gt; 0) {
+    throw new exceptions.SassLintFailureError(errorCount.count + ' errors were detected in \n- ' + errorCount.files.join('\n- '));
+  }
+
+  if (!isNaN(configOptions['max-warnings']) &amp;&amp; warningCount.count &gt; configOptions['max-warnings']) {
+    throw new exceptions.MaxWarningsExceededError(
+      'Number of warnings (' + warningCount.count +
+      ') exceeds the allowed maximum of ' + configOptions['max-warnings'] +
+      '.\n'
+    );
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.sass-lint.format" id="apidoc.element.sass-lint.format">
+        function <span class="apidocSignatureSpan">sass-lint.</span>format
+        <span class="apidocSignatureSpan">(results, options, configPath)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">format = function (results, options, configPath) {
+  var config = this.getConfig(options, configPath),
+      format = config.options.formatter.toLowerCase();
+
+  var formatted = require('eslint/lib/formatters/' + format);
+
+  return formatted(results);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ * @returns {object} results our results object
+ */
+sassLint.outputResults = function (results, options, configPath) {
+  var config = this.getConfig(options, configPath);
+
+  if (this.resultCount(results)) {
+
+var formatted = this.<span class="apidocCodeKeywordSpan">format</span>(results, options, configPath);
+
+if (config.options['output-file']) {
+  try {
+    fs.outputFileSync(path.resolve(process.cwd(), config.options['output-file']), formatted);
+    console.log('Output successfully written to ' + path.resolve(process.cwd(), config.options['output-file']));
+  }
+  catch (e) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.sass-lint.getConfig" id="apidoc.element.sass-lint.getConfig">
+        function <span class="apidocSignatureSpan">sass-lint.</span>getConfig
+        <span class="apidocSignatureSpan">(config, configPath)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getConfig = function (config, configPath) {
+  return slConfig(config, configPath);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ *
+ * @param {object} file file object from fs.readFileSync
+ * @param {object} options user specified rules/options passed in
+ * @param {string} configPath path to a config file
+ * @returns {object} an object containing error &amp; warning counts plus lint messages for each parsed file
+ */
+sassLint.lintText = function (file, options, configPath) {
+var rules = slRules(this.<span class="apidocCodeKeywordSpan">getConfig</span>(options, configPath)),
+    ast = {},
+    detects,
+    results = [],
+    errors = 0,
+    warnings = 0,
+    ruleToggles = null,
+    isEnabledFilter = null;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.sass-lint.lintFileText" id="apidoc.element.sass-lint.lintFileText">
+        function <span class="apidocSignatureSpan">sass-lint.</span>lintFileText
+        <span class="apidocSignatureSpan">(file, options, configPath)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">lintFileText = function (file, options, configPath) {
+  var config = this.getConfig(options, configPath),
+      ignores = config.files ? config.files.ignore : [];
+
+  if (!globule.isMatch(ignores, file.filename)) {
+    return this.lintText(file, options, configPath);
+  }
+
+  return {
+    'filePath': file.filename,
+    'warningCount': 0,
+    'errorCount': 0,
+    'messages': []
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.sass-lint.lintFiles" id="apidoc.element.sass-lint.lintFiles">
+        function <span class="apidocSignatureSpan">sass-lint.</span>lintFiles
+        <span class="apidocSignatureSpan">(files, options, configPath)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">lintFiles = function (files, options, configPath) {
+  var that = this,
+      results = [],
+      includes = [],
+      ignores = '';
+
+  // Files passed as a string on the command line
+  if (files) {
+    ignores = this.getConfig(options, configPath).files.ignore || '';
+    if (files.indexOf(', ') !== -1) {
+      files.split(', ').forEach(function (pattern) {
+        includes = includes.concat(glob.sync(pattern, {ignore: ignores, nodir: true}));
+      });
+    }
+    else {
+      includes = glob.sync(files, {ignore: ignores, nodir: true});
+    }
+  }
+  // If not passed in then we look in the config file
+  else {
+    files = this.getConfig(options, configPath).files;
+    // A glob pattern of files can be just a string
+    if (typeof files === 'string') {
+      includes = glob.sync(files, {nodir: true});
+    }
+    // Look into the include property of files and check if there's an array of files
+    else if (files.include &amp;&amp; files.include instanceof Array) {
+      files.include.forEach(function (pattern) {
+        includes = includes.concat(glob.sync(pattern, {ignore: files.ignore, nodir: true}));
+      });
+    }
+    // Or there is only one pattern in the include property of files
+    else {
+      includes = glob.sync(files.include, {ignore: files.ignore, nodir: true});
+    }
+  }
+
+  includes.forEach(function (file, index) {
+    // Only lint non duplicate files from our glob results
+    if (includes.indexOf(file) === index) {
+      var lint = that.lintText({
+        'text': fs.readFileSync(file),
+        'format': options.syntax ? options.syntax : path.extname(file).replace('.', ''),
+        'filename': file
+      }, options, configPath);
+      results.push(lint);
+    }
+  });
+
+  return results;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.sass-lint.lintText" id="apidoc.element.sass-lint.lintText">
+        function <span class="apidocSignatureSpan">sass-lint.</span>lintText
+        <span class="apidocSignatureSpan">(file, options, configPath)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">lintText = function (file, options, configPath) {
+  var rules = slRules(this.getConfig(options, configPath)),
+      ast = {},
+      detects,
+      results = [],
+      errors = 0,
+      warnings = 0,
+      ruleToggles = null,
+      isEnabledFilter = null;
+
+  try {
+    ast = groot(file.text, file.format, file.filename);
+  }
+  catch (e) {
+    var line = e.line || 1;
+    errors++;
+
+    results = [{
+      ruleId: 'Fatal',
+      line: line,
+      column: 1,
+      message: e.message,
+      severity: 2
+    }];
+  }
+
+  if (ast.content &amp;&amp; ast.content.length &gt; 0) {
+    ruleToggles = getToggledRules(ast);
+    isEnabledFilter = isResultEnabled(ruleToggles);
+
+    rules.forEach(function (rule) {
+      detects = rule.rule.detect(ast, rule)
+        .filter(isEnabledFilter);
+      results = results.concat(detects);
+      if (detects.length) {
+        if (rule.severity === 1) {
+          warnings += detects.length;
+        }
+        else if (rule.severity === 2) {
+          errors += detects.length;
+        }
+      }
+    });
+  }
+
+  results.sort(helpers.sortDetects);
+
+  return {
+    'filePath': file.filename,
+    'warningCount': warnings,
+    'errorCount': errors,
+    'messages': results
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ * @returns {object} Return the results of lintText - a results object
+ */
+sassLint.lintFileText = function (file, options, configPath) {
+var config = this.getConfig(options, configPath),
+    ignores = config.files ? config.files.ignore : [];
+
+if (!globule.isMatch(ignores, file.filename)) {
+  return this.<span class="apidocCodeKeywordSpan">lintText</span>(file, options, configPath);
+}
+
+return {
+  'filePath': file.filename,
+  'warningCount': 0,
+  'errorCount': 0,
+  'messages': []
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.sass-lint.outputResults" id="apidoc.element.sass-lint.outputResults">
+        function <span class="apidocSignatureSpan">sass-lint.</span>outputResults
+        <span class="apidocSignatureSpan">(results, options, configPath)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">outputResults = function (results, options, configPath) {
+  var config = this.getConfig(options, configPath);
+
+  if (this.resultCount(results)) {
+
+    var formatted = this.format(results, options, configPath);
+
+    if (config.options['output-file']) {
+      try {
+        fs.outputFileSync(path.resolve(process.cwd(), config.options['output-file']), formatted);
+        console.log('Output successfully written to ' + path.resolve(process.cwd(), config.options['output-file']));
+      }
+      catch (e) {
+        console.log('Error: Output was unable to be written to ' + path.resolve(process.cwd(), config.options['output-file']));
+      }
+    }
+    else {
+      console.log(formatted);
+    }
+  }
+  return results;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.sass-lint.resultCount" id="apidoc.element.sass-lint.resultCount">
+        function <span class="apidocSignatureSpan">sass-lint.</span>resultCount
+        <span class="apidocSignatureSpan">(results)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">resultCount = function (results) {
+  var warnings = this.warningCount(results),
+      errors = this.errorCount(results);
+
+  return warnings.count + errors.count;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ * @param {object} options user specified rules/options passed in
+ * @param {string} configPath path to a config file
+ * @returns {object} results our results object
+ */
+sassLint.outputResults = function (results, options, configPath) {
+  var config = this.getConfig(options, configPath);
+
+  if (this.<span class="apidocCodeKeywordSpan">resultCount</span>(results)) {
+
+var formatted = this.format(results, options, configPath);
+
+if (config.options['output-file']) {
+  try {
+    fs.outputFileSync(path.resolve(process.cwd(), config.options['output-file']), formatted);
+    console.log('Output successfully written to ' + path.resolve(process.cwd(), config.options['output-file']));
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.sass-lint.warningCount" id="apidoc.element.sass-lint.warningCount">
+        function <span class="apidocSignatureSpan">sass-lint.</span>warningCount
+        <span class="apidocSignatureSpan">(results)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">warningCount = function (results) {
+  var warnings = {
+    count: 0,
+    files: []
+  };
+
+  results.forEach(function (result) {
+    if (result.warningCount) {
+      warnings.count += result.warningCount;
+      warnings.files.push(result.filePath);
+    }
+  });
+
+  return warnings;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+* Parses our results object to count warnings and errors and return
+* a cumulative count of both
+*
+* @param {object} results our results object
+* @returns {int} the cumulative count of errors and warnings detected
+*/
+sassLint.resultCount = function (results) {
+ var warnings = this.<span class="apidocCodeKeywordSpan">warningCount</span>(results),
+     errors = this.errorCount(results);
+
+ return warnings.count + errors.count;
+};
+
+/**
+* Runs each rule against our AST tree and returns our main object of detected
+...</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.sass-lint.config_helpers" id="apidoc.module.sass-lint.config_helpers">module sass-lint.config_helpers</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.sass-lint.config_helpers.checkForConfigExtend" id="apidoc.element.sass-lint.config_helpers.checkForConfigExtend">
+        function <span class="apidocSignatureSpan">sass-lint.config_helpers.</span>checkForConfigExtend
+        <span class="apidocSignatureSpan">(config, curConfPath)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">checkForConfigExtend = function (config, curConfPath) {
+  var mergedConfig = config,
+      subConfig = config.options['config-file'] || false,
+      confPath,
+      resolvedSubConfig;
+
+  if (subConfig) {
+    if (!pathIsAbsolute(subConfig)) {
+      // Process.cwd() in most IDE's will be / so therefore we need to pass the current directory
+      // of the config from which you are 'extending' or we resort to process.cwd() which on the CLI
+      // will be correct
+      confPath = curConfPath ? path.dirname(curConfPath) : process.cwd();
+      subConfig = path.resolve(confPath, subConfig);
+    }
+    // Attempt to load the new found config file
+    resolvedSubConfig = loadConfig(subConfig, curConfPath);
+    // Check the new config file to see if it too is extending
+    resolvedSubConfig = checkForConfigExtend(resolvedSubConfig, subConfig);
+    // Merge our configs with the first encountered being the most important, down to the last config
+    // being the least.
+    mergedConfig = merge.recursive(resolvedSubConfig, config);
+  }
+
+  return mergedConfig;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  }
+}
+else if (!pathIsAbsolute(configPath)) {
+  configPath = path.resolve(process.cwd(), configPath);
+}
+
+config = confHelpers.loadConfig(configPath);
+config = confHelpers.<span class="apidocCodeKeywordSpan">checkForConfigExtend</span>(config, configPath);
+
+// check to see if user config contains an options property and whether property has a property called merge-default-rules
+configMergeExists = (config.options &amp;&amp; typeof config.options['merge-default-rules'] !== 'undefined'
+;);
+
+// If it does then retrieve the value of it here or return false
+configMerge = configMergeExists ? config.options['merge-default-rules'] : false;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.sass-lint.config_helpers.findFile" id="apidoc.element.sass-lint.config_helpers.findFile">
+        function <span class="apidocSignatureSpan">sass-lint.config_helpers.</span>findFile
+        <span class="apidocSignatureSpan">(configPath, filename)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function findFile(configPath, filename) {
+  var HOME = process.env.HOME || process.env.HOMEPATH || process.env.USERPROFILE,
+      dirname = null,
+      parentDirname = null;
+
+  configPath = configPath || path.join(process.cwd(), filename);
+
+  if (configPath &amp;&amp; fs.existsSync(configPath)) {
+    return fs.realpathSync(configPath);
+  }
+  dirname = path.dirname(configPath);
+  parentDirname = path.dirname(dirname);
+
+  if (dirname === null || dirname === HOME || dirname === parentDirname) {
+    return null;
+  }
+  configPath = path.join(parentDirname, filename);
+
+  return findFile(configPath, filename);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  }
+
+  if (options.options &amp;&amp; options.options['config-file']) {
+configPath = options.options['config-file'];
+  }
+
+  if (!configPath) {
+metaPath = confHelpers.<span class="apidocCodeKeywordSpan">findFile</span>(false, 'package.json');
+if (metaPath) {
+  meta = require(metaPath);
+}
+
+if (meta &amp;&amp; meta.sasslintConfig) {
+  configPath = path.resolve(path.dirname(metaPath), meta.sasslintConfig);
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.sass-lint.config_helpers.loadConfig" id="apidoc.element.sass-lint.config_helpers.loadConfig">
+        function <span class="apidocSignatureSpan">sass-lint.config_helpers.</span>loadConfig
+        <span class="apidocSignatureSpan">(cPath)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">loadConfig = function (cPath) {
+  var configPath = cPath,
+      resolvedConfig = {};
+
+  if (configPath) {
+    if (fs.existsSync(configPath)) {
+      resolvedConfig = yaml.safeLoad(fs.readFileSync(configPath, 'utf8')) || {};
+    }
+  }
+
+  return {
+    options: resolvedConfig.options || {},
+    files: resolvedConfig.files || {},
+    rules: resolvedConfig.rules || {}
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    configPath = confHelpers.findFile(false, '.sass-lint.yml');
+  }
+}
+else if (!pathIsAbsolute(configPath)) {
+  configPath = path.resolve(process.cwd(), configPath);
+}
+
+config = confHelpers.<span class="apidocCodeKeywordSpan">loadConfig</span>(configPath);
+config = confHelpers.checkForConfigExtend(config, configPath);
+
+// check to see if user config contains an options property and whether property has a property called merge-default-rules
+configMergeExists = (config.options &amp;&amp; typeof config.options['merge-default-rules'] !== 'undefined'
+;);
+
+// If it does then retrieve the value of it here or return false
+configMerge = configMergeExists ? config.options['merge-default-rules'] : false;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.sass-lint.config_helpers.loadDefaults" id="apidoc.element.sass-lint.config_helpers.loadDefaults">
+        function <span class="apidocSignatureSpan">sass-lint.config_helpers.</span>loadDefaults
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function loadDefaults() {
+  return yaml.safeLoad(fs.readFileSync(path.join(__dirname, 'config', 'sass-lint.yml'), 'utf8'));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+// If it does then retrieve the value of it here or return false
+optionsMerge = optionsMergeExists ? options.options['merge-default-rules'] : false;
+
+
+// order of preference is inline options &gt; user config &gt; default config
+// merge-default-rules defaults to true so each step above should merge with the previous. If at any step merge-default-rules is
+ set to
+// false it should skip that steps merge.
+defaults = confHelpers.<span class="apidocCodeKeywordSpan">loadDefaults</span>();
+finalConfig = merge.recursive(defaults, config, options);
+
+// if merge-default-rules is set to false in user config file then we essentially skip the merging with default rules by overwriting
+ our
+// final rules with the content of our user config otherwise we don't take action here as the default merging has already happened
+if (configMergeExists &amp;&amp; !configMerge) {
+  finalConfig.rules = config.rules;
+}
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.sass-lint.exceptions" id="apidoc.module.sass-lint.exceptions">module sass-lint.exceptions</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.sass-lint.exceptions.MaxWarningsExceededError" id="apidoc.element.sass-lint.exceptions.MaxWarningsExceededError">
+        function <span class="apidocSignatureSpan">sass-lint.exceptions.</span>MaxWarningsExceededError
+        <span class="apidocSignatureSpan">(message)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">MaxWarningsExceededError = function (message) {
+  Error.captureStackTrace(this, this.constructor);
+  this.name = 'MaxWarningsExceededError';
+  this.message = message;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+      configOptions = this.getConfig(options, configPath).options;
+
+  if (errorCount.count &gt; 0) {
+    throw new exceptions.SassLintFailureError(errorCount.count + ' errors were detected in \n- ' + errorCount.files.join
+('\n- '));
+  }
+
+  if (!isNaN(configOptions['max-warnings']) &amp;&amp; warningCount.count &gt; configOptions['max-warnings'
+;]) {
+    throw new exceptions.<span class="apidocCodeKeywordSpan">MaxWarningsExceededError</span>(
+      'Number of warnings (' + warningCount.count +
+      ') exceeds the allowed maximum of ' + configOptions['max-warnings'] +
+      '.\n'
+    );
+  }
+};
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.sass-lint.exceptions.SassLintFailureError" id="apidoc.element.sass-lint.exceptions.SassLintFailureError">
+        function <span class="apidocSignatureSpan">sass-lint.exceptions.</span>SassLintFailureError
+        <span class="apidocSignatureSpan">(message)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">SassLintFailureError = function (message) {
+  Error.captureStackTrace(this, this.constructor);
+  this.name = 'SassLintFailureError';
+  this.message = message;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+configPath = typeof configPath !== 'undefined' ? configPath : null;
+
+var errorCount = this.errorCount(results),
+    warningCount = this.warningCount(results),
+    configOptions = this.getConfig(options, configPath).options;
+
+if (errorCount.count &gt; 0) {
+  throw new exceptions.<span class="apidocCodeKeywordSpan">SassLintFailureError</span>(errorCount.count + ' errors were detected
+ in\n- ' + errorCount.files.join('\n- '));
+}
+
+if (!isNaN(configOptions['max-warnings']) &amp;&amp; warningCount.count &gt; configOptions['max-warnings'
+;]) {
+  throw new exceptions.MaxWarningsExceededError(
+    'Number of warnings (' + warningCount.count +
+    ') exceeds the allowed maximum of ' + configOptions['max-warnings'] +
+    '.\n'
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.sass-lint.helpers" id="apidoc.module.sass-lint.helpers">module sass-lint.helpers</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.sass-lint.helpers.addUnique" id="apidoc.element.sass-lint.helpers.addUnique">
+        function <span class="apidocSignatureSpan">sass-lint.helpers.</span>addUnique
+        <span class="apidocSignatureSpan">(results, item)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">addUnique = function (results, item) {
+  if (this.isUnique(results, item)) {
+    results.push(item);
+  }
+  return results;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.sass-lint.helpers.attemptTraversal" id="apidoc.element.sass-lint.helpers.attemptTraversal">
+        function <span class="apidocSignatureSpan">sass-lint.helpers.</span>attemptTraversal
+        <span class="apidocSignatureSpan">(node, traversalPath)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">attemptTraversal = function (node, traversalPath) {
+  var i,
+      nextNodeList,
+      currentNodeList = [],
+      processChildNode = function processChildNode (child) {
+        child.forEach(traversalPath[i], function (n) {
+          nextNodeList.push(n);
+        });
+      };
+
+  node.forEach(traversalPath[0], function (n) {
+    currentNodeList.push(n);
+  });
+
+  for (i = 1; i &lt; traversalPath.length; i++) {
+    if (currentNodeList.length === 0) {
+      return [];
+    }
+
+    nextNodeList = [];
+    currentNodeList.forEach(processChildNode);
+    currentNodeList = nextNodeList;
+  }
+  return currentNodeList;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ * Collects all suffix extensions for a selector
+ * @param   {object}  ruleset      ASTNode of type ruleset, containing a selector with nested suffix extensions
+ * @param   {string}  selectorType Node type of the selector (e.g. class, id)
+ * @returns {array}                Array of Nodes with the content property replaced by the complete selector
+ *                                       (without '.', '#', etc) resulting from suffix extensions
+ */
+helpers.collectSuffixExtensions = function (ruleset, selectorType) {
+var parentSelectors = helpers.<span class="apidocCodeKeywordSpan">attemptTraversal</span>(ruleset, ['selector', selectorType
+, 'ident']),
+    childSuffixes = helpers.attemptTraversal(ruleset, ['block', 'ruleset']),
+    selectorList = [];
+
+if (parentSelectors.length === 0) {
+  return [];
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.sass-lint.helpers.collectSuffixExtensions" id="apidoc.element.sass-lint.helpers.collectSuffixExtensions">
+        function <span class="apidocSignatureSpan">sass-lint.helpers.</span>collectSuffixExtensions
+        <span class="apidocSignatureSpan">(ruleset, selectorType)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">collectSuffixExtensions = function (ruleset, selectorType) {
+  var parentSelectors = helpers.attemptTraversal(ruleset, ['selector', selectorType, 'ident']),
+      childSuffixes = helpers.attemptTraversal(ruleset, ['block', 'ruleset']),
+      selectorList = [];
+
+  if (parentSelectors.length === 0) {
+    return [];
+  }
+
+  // Goes recursively through all nodes that look like suffix extensions. There may be multiple parents that are
+  // extended, so lots of looping is required.
+  var processChildSuffix = function (child, parents) {
+    var currentParents = [],
+        selectors = helpers.attemptTraversal(child, ['selector', 'parentSelectorExtension', 'ident']),
+        nestedChildSuffixes = helpers.attemptTraversal(child, ['block', 'ruleset']);
+
+    selectors.forEach(function (childSuffixNode) {
+      // append suffix extension to all parent selectors
+      parents.forEach(function (parent) {
+        // clone so we don't modify the actual AST
+        var clonedChildSuffixNode = gonzales.createNode(childSuffixNode);
+        clonedChildSuffixNode.content = parent.content + clonedChildSuffixNode.content;
+
+        currentParents.push(clonedChildSuffixNode);
+      });
+    });
+
+    selectorList = selectorList.concat(currentParents);
+
+    nestedChildSuffixes.forEach(function (childSuffix) {
+      processChildSuffix(childSuffix, currentParents);
+    });
+  };
+
+  childSuffixes.forEach(function (childSuffix) {
+    processChildSuffix(childSuffix, parentSelectors);
+  });
+
+  return parentSelectors.concat(selectorList);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.sass-lint.helpers.hasEOL" id="apidoc.element.sass-lint.helpers.hasEOL">
+        function <span class="apidocSignatureSpan">sass-lint.helpers.</span>hasEOL
+        <span class="apidocSignatureSpan">(str)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">hasEOL = function (str) {
+  return /\r\n|\n/.test(str);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.sass-lint.helpers.isCamelCase" id="apidoc.element.sass-lint.helpers.isCamelCase">
+        function <span class="apidocSignatureSpan">sass-lint.helpers.</span>isCamelCase
+        <span class="apidocSignatureSpan">(str)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isCamelCase = function (str) {
+  return /^[a-z][a-zA-Z0-9]*$/.test(str);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.sass-lint.helpers.isEmptyLine" id="apidoc.element.sass-lint.helpers.isEmptyLine">
+        function <span class="apidocSignatureSpan">sass-lint.helpers.</span>isEmptyLine
+        <span class="apidocSignatureSpan">(str)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isEmptyLine = function (str) {
+  return /(\r\n|\n){2}/.test(str);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.sass-lint.helpers.isEqual" id="apidoc.element.sass-lint.helpers.isEqual">
+        function <span class="apidocSignatureSpan">sass-lint.helpers.</span>isEqual
+        <span class="apidocSignatureSpan">(a, b)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isEqual = function (a, b) {
+  var startLine = a.start.line === b.start.line ? true : false,
+      endLine = a.end.line === b.end.line ? true : false,
+      type = a.type === b.type ? true : false,
+      length = a.content.length === b.content.length ? true : false;
+
+  if (startLine &amp;&amp; endLine &amp;&amp; type &amp;&amp; length) {
+    return true;
+  }
+  else {
+    return false;
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.sass-lint.helpers.isHyphenatedBEM" id="apidoc.element.sass-lint.helpers.isHyphenatedBEM">
+        function <span class="apidocSignatureSpan">sass-lint.helpers.</span>isHyphenatedBEM
+        <span class="apidocSignatureSpan">(str)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isHyphenatedBEM = function (str) {
+  return !(/[A-Z]|-{3}|_{3}|[^_]_[^_]/.test(str));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.sass-lint.helpers.isHyphenatedLowercase" id="apidoc.element.sass-lint.helpers.isHyphenatedLowercase">
+        function <span class="apidocSignatureSpan">sass-lint.helpers.</span>isHyphenatedLowercase
+        <span class="apidocSignatureSpan">(str)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isHyphenatedLowercase = function (str) {
+  return !(/[^\-a-z0-9]/.test(str));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.sass-lint.helpers.isLowerCase" id="apidoc.element.sass-lint.helpers.isLowerCase">
+        function <span class="apidocSignatureSpan">sass-lint.helpers.</span>isLowerCase
+        <span class="apidocSignatureSpan">(str)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isLowerCase = function (str) {
+  var pieces = str.split(''),
+      i,
+      result = 0;
+
+  for (i = 0; i &lt; pieces.length; i++) {
+    if (!helpers.isNumber(pieces[i])) {
+      if (pieces[i] === pieces[i].toLowerCase() &amp;&amp; pieces[i] !== pieces[i].toUpperCase()) {
+        result++;
+      }
+      else {
+        return false;
+      }
+    }
+  }
+  if (result) {
+    return true;
+  }
+  return false;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.sass-lint.helpers.isNestable" id="apidoc.element.sass-lint.helpers.isNestable">
+        function <span class="apidocSignatureSpan">sass-lint.helpers.</span>isNestable
+        <span class="apidocSignatureSpan">(currentVal, previousVal, elements, nestable)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isNestable = function (currentVal, previousVal, elements, nestable) {
+  // check if they are nestable by checking the previous element against one
+  // of the user specified selector types
+  if (elements.indexOf(previousVal) !== -1 &amp;&amp; nestable.indexOf(currentVal) !== -1) {
+    return true;
+  }
+
+  return false;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.sass-lint.helpers.isNewLine" id="apidoc.element.sass-lint.helpers.isNewLine">
+        function <span class="apidocSignatureSpan">sass-lint.helpers.</span>isNewLine
+        <span class="apidocSignatureSpan">(node)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isNewLine = function (node) {
+  // using type === instead of is just in case node happens to be a string
+  return !!(node &amp;&amp; node.type === 'space' &amp;&amp; node.content.match('\n'));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.sass-lint.helpers.isNumber" id="apidoc.element.sass-lint.helpers.isNumber">
+        function <span class="apidocSignatureSpan">sass-lint.helpers.</span>isNumber
+        <span class="apidocSignatureSpan">(val)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isNumber = function (val) {
+  if (isNaN(parseInt(val, 10))) {
+    return false;
+  }
+  return true;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+helpers.isUpperCase = function (str) {
+var pieces = str.split(''),
+    i,
+    result = 0;
+
+for (i = 0; i &lt; pieces.length; i++) {
+  if (!helpers.<span class="apidocCodeKeywordSpan">isNumber</span>(pieces[i])) {
+    if (pieces[i] === pieces[i].toUpperCase() &amp;&amp; pieces[i] !== pieces[i].toLowerCase()) {
+      result++;
+    }
+    else {
+      return false;
+    }
+  }
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.sass-lint.helpers.isPartialStringMatch" id="apidoc.element.sass-lint.helpers.isPartialStringMatch">
+        function <span class="apidocSignatureSpan">sass-lint.helpers.</span>isPartialStringMatch
+        <span class="apidocSignatureSpan">(needle, haystack)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isPartialStringMatch = function (needle, haystack) {
+  for (var i = 0; i &lt; haystack.length; i++) {
+    if (haystack[i].indexOf(needle) &gt;= 0) {
+      return true;
+    }
+  }
+
+  return false;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.sass-lint.helpers.isPascalCase" id="apidoc.element.sass-lint.helpers.isPascalCase">
+        function <span class="apidocSignatureSpan">sass-lint.helpers.</span>isPascalCase
+        <span class="apidocSignatureSpan">(str)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isPascalCase = function (str) {
+  return /^[A-Z][a-zA-Z0-9]*$/.test(str);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.sass-lint.helpers.isSnakeCase" id="apidoc.element.sass-lint.helpers.isSnakeCase">
+        function <span class="apidocSignatureSpan">sass-lint.helpers.</span>isSnakeCase
+        <span class="apidocSignatureSpan">(str)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isSnakeCase = function (str) {
+  return !(/[^_a-z0-9]/.test(str));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.sass-lint.helpers.isSpace" id="apidoc.element.sass-lint.helpers.isSpace">
+        function <span class="apidocSignatureSpan">sass-lint.helpers.</span>isSpace
+        <span class="apidocSignatureSpan">(node)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isSpace = function (node) {
+  return !!(node &amp;&amp; node.type === 'space' &amp;&amp; !node.content.match('\n'));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.sass-lint.helpers.isStrictBEM" id="apidoc.element.sass-lint.helpers.isStrictBEM">
+        function <span class="apidocSignatureSpan">sass-lint.helpers.</span>isStrictBEM
+        <span class="apidocSignatureSpan">(str)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isStrictBEM = function (str) {
+  return /^[a-z](\-?[a-z0-9]+)*(__[a-z0-9](\-?[a-z0-9]+)*)?((_[a-z0-9](\-?[a-z0-9]+)*){0,2})?$/.test(str);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.sass-lint.helpers.isUnique" id="apidoc.element.sass-lint.helpers.isUnique">
+        function <span class="apidocSignatureSpan">sass-lint.helpers.</span>isUnique
+        <span class="apidocSignatureSpan">(results, item)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isUnique = function (results, item) {
+  var search = this.propertySearch(results, item.line, 'line');
+
+  if (search === -1) {
+    return true;
+  }
+  else if (results[search].column === item.column &amp;&amp; results[search].message === item.message) {
+    return false;
+  }
+  else {
+    return true;
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+}
+else {
+  return true;
+}
+};
+
+helpers.addUnique = function (results, item) {
+if (this.<span class="apidocCodeKeywordSpan">isUnique</span>(results, item)) {
+  results.push(item);
+}
+return results;
+};
+
+helpers.sortDetects = function (a, b) {
+if (a.line &lt; b.line) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.sass-lint.helpers.isUpperCase" id="apidoc.element.sass-lint.helpers.isUpperCase">
+        function <span class="apidocSignatureSpan">sass-lint.helpers.</span>isUpperCase
+        <span class="apidocSignatureSpan">(str)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isUpperCase = function (str) {
+  var pieces = str.split(''),
+      i,
+      result = 0;
+
+  for (i = 0; i &lt; pieces.length; i++) {
+    if (!helpers.isNumber(pieces[i])) {
+      if (pieces[i] === pieces[i].toUpperCase() &amp;&amp; pieces[i] !== pieces[i].toLowerCase()) {
+        result++;
+      }
+      else {
+        return false;
+      }
+    }
+  }
+  if (result) {
+    return true;
+  }
+  return false;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.sass-lint.helpers.isValidHex" id="apidoc.element.sass-lint.helpers.isValidHex">
+        function <span class="apidocSignatureSpan">sass-lint.helpers.</span>isValidHex
+        <span class="apidocSignatureSpan">(str)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isValidHex = function (str) {
+  if (str.match(/^([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$/)) {
+    return true;
+  }
+  return false;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.sass-lint.helpers.loadConfigFile" id="apidoc.element.sass-lint.helpers.loadConfigFile">
+        function <span class="apidocSignatureSpan">sass-lint.helpers.</span>loadConfigFile
+        <span class="apidocSignatureSpan">(configPath)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">loadConfigFile = function (configPath) {
+  var fileDir = path.dirname(configPath),
+      fileName = path.basename(configPath),
+      fileExtension = path.extname(fileName),
+      filePath = path.join(__dirname, 'config', fileDir, fileName),
+      file = fs.readFileSync(filePath, 'utf8') || false;
+
+  if (file) {
+    if (fileExtension === '.yml') {
+      return yaml.safeLoad(file);
+    }
+  }
+
+  return file;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.sass-lint.helpers.log" id="apidoc.element.sass-lint.helpers.log">
+        function <span class="apidocSignatureSpan">sass-lint.helpers.</span>log
+        <span class="apidocSignatureSpan">(input)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function log(input) {
+  console.log(util.inspect(input, false, null));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  if (this.resultCount(results)) {
+
+var formatted = this.format(results, options, configPath);
+
+if (config.options['output-file']) {
+  try {
+    fs.outputFileSync(path.resolve(process.cwd(), config.options['output-file']), formatted);
+    console.<span class="apidocCodeKeywordSpan">log</span>('Output successfully written to ' + path.resolve(process.cwd
+(), config.options['output-file']));
+  }
+  catch (e) {
+    console.log('Error: Output was unable to be written to ' + path.resolve(process.cwd(), config.options['output
+-file']));
+  }
+}
+else {
+  console.log(formatted);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.sass-lint.helpers.propertySearch" id="apidoc.element.sass-lint.helpers.propertySearch">
+        function <span class="apidocSignatureSpan">sass-lint.helpers.</span>propertySearch
+        <span class="apidocSignatureSpan">(haystack, needle, property)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">propertySearch = function (haystack, needle, property) {
+  var length = haystack.length,
+      i;
+
+  for (i = 0; i &lt; length; i++) {
+    if (haystack[i][property] === needle) {
+      return i;
+    }
+  }
+  return -1;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+}
+else {
+  return false;
+}
+};
+
+helpers.isUnique = function (results, item) {
+var search = this.<span class="apidocCodeKeywordSpan">propertySearch</span>(results, item.line, 'line');
+
+if (search === -1) {
+  return true;
+}
+else if (results[search].column === item.column &amp;&amp; results[search].message === item.message) {
+  return false;
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.sass-lint.helpers.sortDetects" id="apidoc.element.sass-lint.helpers.sortDetects">
+        function <span class="apidocSignatureSpan">sass-lint.helpers.</span>sortDetects
+        <span class="apidocSignatureSpan">(a, b)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">sortDetects = function (a, b) {
+  if (a.line &lt; b.line) {
+    return -1;
+  }
+  if (a.line &gt; b.line) {
+    return 1;
+  }
+  if (a.line === b.line) {
+    if (a.column &lt; b.column) {
+      return -1;
+    }
+    if (a.column &gt; b.column) {
+      return 1;
+    }
+    return 0;
+  }
+  return 0;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.sass-lint.helpers.stripBom" id="apidoc.element.sass-lint.helpers.stripBom">
+        function <span class="apidocSignatureSpan">sass-lint.helpers.</span>stripBom
+        <span class="apidocSignatureSpan">(str)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">stripBom = function (str) {
+  if (typeof str !== 'string') {
+    throw new TypeError('Expected a string, got ' + typeof str);
+  }
+
+  if (str.charCodeAt(0) === 0xFEFF) {
+    return str.slice(1);
+  }
+
+  return str;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var fm = require('front-matter');
+var helpers = require('./helpers');
+
+module.exports = function (text, syntax, filename) {
+var tree;
+
+// Run `.toString()` to allow Buffers to be passed in
+text = helpers.<span class="apidocCodeKeywordSpan">stripBom</span>(text.toString());
+
+// if we're skipping front matter do it here, fall back to just our text in case it fails
+if (fm.test(text)) {
+  text = fm(text).body || text;
+}
+
+try {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.sass-lint.helpers.stripLastSpace" id="apidoc.element.sass-lint.helpers.stripLastSpace">
+        function <span class="apidocSignatureSpan">sass-lint.helpers.</span>stripLastSpace
+        <span class="apidocSignatureSpan">(selector)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">stripLastSpace = function (selector) {
+
+  if (selector.charAt(selector.length - 1) === ' ') {
+    return selector.substr(0, selector.length - 1);
+
+  }
+
+  return selector;
+
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.sass-lint.helpers.stripPrefix" id="apidoc.element.sass-lint.helpers.stripPrefix">
+        function <span class="apidocSignatureSpan">sass-lint.helpers.</span>stripPrefix
+        <span class="apidocSignatureSpan">(str)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">stripPrefix = function (str) {
+  var modPropertyArr = str.split('-'),
+      modProperty = '',
+      prefLength = modPropertyArr[2] === 'osx' ? 2 : 1;
+
+  modPropertyArr.splice(1, prefLength);
+
+  modPropertyArr.forEach(function (item, index) {
+    modProperty = modProperty + item;
+    if (index &gt; 0 &amp;&amp; index &lt; modPropertyArr.length - 1) {
+      modProperty = modProperty + '-';
+    }
+  });
+
+  return modProperty;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.sass-lint.helpers.stripQuotes" id="apidoc.element.sass-lint.helpers.stripQuotes">
+        function <span class="apidocSignatureSpan">sass-lint.helpers.</span>stripQuotes
+        <span class="apidocSignatureSpan">(str)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">stripQuotes = function (str) {
+  return str.substring(1, str.length - 1);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.sass-lint.ruleToggler" id="apidoc.module.sass-lint.ruleToggler">module sass-lint.ruleToggler</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.sass-lint.ruleToggler.getToggledRules" id="apidoc.element.sass-lint.ruleToggler.getToggledRules">
+        function <span class="apidocSignatureSpan">sass-lint.ruleToggler.</span>getToggledRules
+        <span class="apidocSignatureSpan">(ast)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getToggledRules = function (ast) {
+  var toggledRules = {
+    ruleEnable: {
+      // Format in here is [isEnabled, line, column]
+    },
+    globalEnable: []
+  };
+  if (!ast.traverseByTypes) {
+    return toggledRules;
+  }
+  ast.traverseByTypes(['multilineComment', 'singlelineComment'], function (comment, i, parent) {
+    var content = comment.content;
+    if (!content) {
+      return;
+    }
+    var tokens = content.split(/[\s,]+/)
+      .filter(function (s) {
+        return s.trim().length &gt; 0;
+      });
+    if (!tokens.length) {
+      return;
+    }
+    var first = tokens[0],
+        rules = tokens.slice(1);
+    switch (first) {
+    case 'sass-lint:disable':
+      addDisable(toggledRules, rules, comment.start.line, comment.start.column);
+      break;
+    case 'sass-lint:enable':
+      addEnable(toggledRules, rules, comment.start.line, comment.start.column);
+      break;
+    case 'sass-lint:disable-block':
+      // future ref: not sure what the appropriate behavior is if there is no parent block; currently NPEs
+      addDisableBlock(toggledRules, rules, parent);
+      break;
+    case 'sass-lint:disable-all':
+      addDisableAll(toggledRules, comment.start.line, comment.start.column);
+      break;
+    case 'sass-lint:enable-all':
+      addEnableAll(toggledRules, comment.start.line, comment.start.column);
+      break;
+    case 'sass-lint:disable-line':
+      addDisableLine(toggledRules, rules, comment.start.line);
+      break;
+    default:
+      return;
+    }
+  });
+  // Sort these toggle stacks so reading them is easier (algorithmically).
+  // Usually already sorted but since it's not guaranteed by the contract with gonzales-pe, ensuring it is.
+  toggledRules.globalEnable.sort(sortRange);
+  Object.keys(toggledRules.ruleEnable).map(function (ruleId) {
+    toggledRules.ruleEnable[ruleId].sort(sortRange);
+  });
+  return toggledRules;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.sass-lint.ruleToggler.isResultEnabled" id="apidoc.element.sass-lint.ruleToggler.isResultEnabled">
+        function <span class="apidocSignatureSpan">sass-lint.ruleToggler.</span>isResultEnabled
+        <span class="apidocSignatureSpan">(toggledRules)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isResultEnabled = function (toggledRules) {
+  return function (ruleResult) {
+    var ruleId = ruleResult.ruleId;
+    // Convention: if no column or line, assume rule is targetting 1.
+    var line = ruleResult.line || 1;
+    var column = ruleResult.column || 1;
+    var isGloballyEnabled = toggledRules.globalEnable
+      .reduce(function (acc, toggleRange) {
+        return isBeforeOrSame(line, column, toggleRange[1], toggleRange[2])
+          ? acc
+          : toggleRange[0];
+      }, true);
+    if (!isGloballyEnabled) {
+      return false;
+    }
+    if (!toggledRules.ruleEnable[ruleId]) {
+      return true;
+    }
+    var isRuleEnabled = toggledRules.ruleEnable[ruleId]
+      .reduce(function (acc, toggleRange) {
+        return isBeforeOrSame(line, column, toggleRange[1], toggleRange[2])
+          ? acc
+          : toggleRange[0];
+      }, true);
+    if (!isRuleEnabled) {
+      return false;
+    }
+    return true;
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.sass-lint.selector_helpers" id="apidoc.module.sass-lint.selector_helpers">module sass-lint.selector_helpers</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.sass-lint.selector_helpers.constructSelector" id="apidoc.element.sass-lint.selector_helpers.constructSelector">
+        function <span class="apidocSignatureSpan">sass-lint.selector_helpers.</span>constructSelector
+        <span class="apidocSignatureSpan">(val)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">constructSelector = function (val) {
+  var content = null;
+
+  if (val.is('arguments')) {
+    content = constructSubSelector(val, '(', ')', constructSelector);
+  }
+
+  else if (val.is('atkeyword')) {
+    content = constructSubSelector(val, '@', '', constructSelector);
+  }
+
+  else if (val.is('attributeSelector')) {
+    content = constructSubSelector(val, '[', ']', constructSelector);
+  }
+
+  else if (val.is('class')) {
+    content = addGrammar(val, '.', '');
+  }
+
+  else if (val.is('id')) {
+    content = addGrammar(val, '#', '');
+  }
+
+  else if (val.is('interpolation')) {
+    content = constructSubSelector(val, '#{', '}', constructSelector);
+  }
+
+  else if (val.is('nth')) {
+    content = addGrammar(val, '(', ')');
+  }
+
+  else if (val.is('nthSelector')) {
+    content = constructSubSelector(val, ':', '', constructSelector);
+  }
+
+  else if (val.is('parentheses')) {
+    content = constructSubSelector(val, '(', ')', constructSelector);
+  }
+
+  else if (val.is('placeholder')) {
+    content = constructSubSelector(val, '%', '', constructSelector);
+  }
+
+  else if (val.is('pseudoClass')) {
+    content = constructSubSelector(val, ':', '', constructSelector);
+  }
+
+  else if (val.is('pseudoElement')) {
+    content = addGrammar(val, '::', '');
+  }
+
+  else if (val.is('space')) {
+    content = ' ';
+  }
+
+  else if (val.is('variable')) {
+    content = constructSubSelector(val, '$', '', constructSelector);
+  }
+
+  else if (simpleIdents.indexOf(val.type) !== -1) {
+    content = val.content;
+  }
+
+  else if (subSelectors.indexOf(val.type) !== -1) {
+    content = constructSubSelector(val, '', '', constructSelector);
+  }
+
+  return content;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>
